@@ -220,7 +220,7 @@ We used a fake email to chech wheather it is working ....
 ## Author
 
 The Appointment Scheduler using Alexa skill was developed by :
--
+- https://github.com/AkshayaAdabala
 - Repository :
 
 ## Feedback
