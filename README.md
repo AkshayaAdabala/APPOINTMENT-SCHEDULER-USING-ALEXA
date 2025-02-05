@@ -182,7 +182,8 @@ In our project we use two DynamoDB tables:
       - specialization: The medical specialization of the doctor.
       - calendar_id: The unique identifier for the doctor's Google Calendar.
 -Usage: The skill checks this table to find available doctors based on user-requested medical specialization and schedules appointments by updating the doctors' calendars with the appointment details.
-- doctor_calendar_table csv file:
+
+- doctor_calendar_table csv file: https://github.com/AkshayaAdabala/APPOINTMENT-SCHEDULER-USING-ALEXA/blob/main/Doctor%20details.csv
 
 ## Emails you get while working with the skill
 We used a fake email to chech wheather it is working ....
@@ -218,7 +219,7 @@ We used a fake email to chech wheather it is working ....
 
 ## Author
 
-The Hospital Appointment Scheduler using Alexa skill was developed by :
+The Appointment Scheduler using Alexa skill was developed by :
 -
 - Repository :
 
