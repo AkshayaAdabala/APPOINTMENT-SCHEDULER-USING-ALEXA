@@ -83,5 +83,4 @@ The Hospital Appointment Scheduler skill is built using the following technologi
 
   The Lambda function for the Appointment Scheduler skill is responsible for handling user requests and interacting with the backend services. It is written in Python and integrated with the ASK SDK for Alexa interactions. The code is structured into several intent handlers to handle different user intents, such as registration, login, appointment booking, doctor recommendations, and more.
 
-*Code Link:* 
-*Code Link:* 
+*Code Link:* https://github.com/AkshayaAdabala/APPOINTMENT-SCHEDULER-USING-ALEXA/blob/main/lambda_function.py 
