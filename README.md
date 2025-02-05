@@ -173,4 +173,55 @@ In our project we use two DynamoDB tables:
       - email: The email address of the patient used for verification and communication.
 - Usage: When a new patient uses the skill, their registration information is collected and stored in this table. It is also used to retrieve the patient's details when they return to the skill.
 
-- Patient_Registration csv file:
+- Patient_Registration csv file: https://github.com/AkshayaAdabala/APPOINTMENT-SCHEDULER-USING-ALEXA/blob/main/Patient%20data.csv
+
+2. doctor_calendar_table Table:
+- Purpose: This table is used to store the availability details of doctors for scheduling appointments.
+- Attributes:
+      - doctor_name: The name of the doctor.
+      - specialization: The medical specialization of the doctor.
+      - calendar_id: The unique identifier for the doctor's Google Calendar.
+-Usage: The skill checks this table to find available doctors based on user-requested medical specialization and schedules appointments by updating the doctors' calendars with the appointment details.
+- doctor_calendar_table csv file:
+
+## Emails you get while working with the skill
+We used a fake email to chech wheather it is working ....
+### Verification Email
+![mainimg1](https://github.com/katakampranav/Hospital-Appointment-Scheduler-using-Alexa/assets/133202118/c28befa8-abf8-447b-8ce9-7ef8b5f1a410)
+### Conformation page
+![mainimg3](https://github.com/katakampranav/Hospital-Appointment-Scheduler-using-Alexa/assets/133202118/d451583c-3de5-4029-9d18-e2d8af546194)
+### Details Email
+![mainimg2](https://github.com/katakampranav/Hospital-Appointment-Scheduler-using-Alexa/assets/133202118/b6191d1b-705f-4f57-8340-826c23461838)
+### Appointment Scheduled Email
+![img10](https://github.com/katakampranav/Hospital-Appointment-Scheduler-using-Alexa/assets/133202118/1bf5af2c-173b-4e37-bc23-c506c693d19a)
+
+
+## Appointment Scheduling Process in Google Calendar
+### -> The image below will provide the information or pictorial representation how the appointments of different patients are scheduled in calendar (Hospital Calendar)
+- Different colours in the calendar left side represent different doctors of the respective hospital.
+![image](https://github.com/katakampranav/Hospital-Appointment-Scheduler-using-Alexa/assets/133202118/ed173b27-da33-4b87-bbf3-e43249a4df3a)
+
+### -> The image below will provide the representation how the doctor will be able to access the information of patient in his personal calendar or whole hospital calendar
+![image](https://github.com/katakampranav/Hospital-Appointment-Scheduler-using-Alexa/assets/133202118/b1f1acef-8c06-4de5-8e97-5829464637cb)
+
+## Applications
+
+1. *Voice-Based Doctor Recommendations*: Implement a feature that allows Alexa to recommend doctors based on the patient's symptoms or medical conditions. Users can ask Alexa for suggestions, and the skill can provide a list of doctors specializing in relevant fields.
+
+2. *Appointment Reminders*: Enable the skill to send appointment reminders to patients a day or a few hours before their scheduled appointment. This can help reduce no-shows and improve overall patient attendance.
+
+3. *Multilingual Support*: Extend the skill's capabilities to support multiple languages. Patients from diverse linguistic backgrounds can then interact with the skill in their preferred language.
+
+4. *Voice Authentication*: Integrate voice authentication technology to improve security during the registration and login process. This can enhance the skill's ability to verify the identity of patients securely.
+
+5. *Emergency Services*: Add emergency response capabilities, where users can request immediate medical assistance or information during critical situations.
+
+## Author
+
+The Hospital Appointment Scheduler using Alexa skill was developed by :
+-
+- Repository :
+
+## Feedback
+
+For any feedback or queries, please reach out to me at akshayaadabala1357@gmail.com.
