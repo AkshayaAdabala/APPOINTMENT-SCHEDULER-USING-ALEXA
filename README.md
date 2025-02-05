@@ -84,3 +84,93 @@ The Hospital Appointment Scheduler skill is built using the following technologi
   The Lambda function for the Appointment Scheduler skill is responsible for handling user requests and interacting with the backend services. It is written in Python and integrated with the ASK SDK for Alexa interactions. The code is structured into several intent handlers to handle different user intents, such as registration, login, appointment booking, doctor recommendations, and more.
 
 *Code Link:* https://github.com/AkshayaAdabala/APPOINTMENT-SCHEDULER-USING-ALEXA/blob/main/lambda_function.py 
+
+## Skill Invocation and User Flow
+
+1. *Skill Launch*: Users can invoke the skill by saying "Alexa, open Appointment Scheduler."
+
+2. *New Patient*: New patients can provide their information during the registration process and store them in DynamoDB. The skill will send a verification email to the provided email address.
+
+3. *Verification*: New patients need to verify their email by following the instructions in the verification email.
+
+4. *Returning Patient*: Returning patients can log in using their patient ID. If they forget their ID, they can verify their identity by providing their father's name.
+
+5. *Doctor Availability Checking*: Patients can check the availability of doctors based on specialization, date, and time.
+
+6. *Appointment Booking*: Patients can book appointments with available doctors.
+
+7. *Voice-Based Doctor Recommendations*: Patients can ask Alexa for doctor recommendations based on their symptoms or medical conditions.
+
+8. *Voice Authentication*: The skill uses voice authentication for user identity verification during registration and login.
+
+9. *Email Notifications*: Verification emails are sent to new patients, and confirmation emails are sent for scheduled appointments.
+
+## Working with New Patients
+
+New patients can efficiently register and schedule appointments through the Appointment Scheduler skill. Below is a step-by-step guide on how new patients can utilize the skill:
+
+1.	*Skill Invocation*: New patients can initiate the skill by saying "Alexa, open Appointment Scheduler."
+
+2.	*Registration*: Alexa will guide the new patient through the registration process. The patient needs to provide the following information:
+      - Full Name
+      - Age
+      - Gender
+      - Date of Birth (DOB)
+      - Father's Name
+      - Email Address
+
+3.	*Email Verification*: After registration, the skill will send a verification email to the provided email address. The patient must check their email and follow the instructions to complete the verification process.
+
+4.	*Account Creation*: Once the email is verified, the skill will create a unique patient ID for the new patient. The patient can use this ID for future logins.
+
+5.	*Storing the Information*: The details of the patient are successfully stored in the DynamoDB in the form of table.
+
+6.	*Doctor Availability Checking*: New patients can inquire about doctor availability based on their preferred specialization, date, and time.
+
+7.	*Appointment Booking*: After selecting a suitable doctor and appointment slot, the patient can proceed to book the appointment. Alexa will confirm the booking and send a confirmation email to the patient.
+
+![mainimg1](https://github.com/katakampranav/Hospital-Appointment-Scheduler-using-Alexa/assets/133202118/e12fbd32-e859-4e52-9d99-f1a66c394efc)
+
+![mainimg2](https://github.com/katakampranav/Hospital-Appointment-Scheduler-using-Alexa/assets/133202118/8df9fdf0-be12-40f6-abb0-4a937f68265e)
+
+## Working with Returning Patients
+
+Returning patients can conveniently access their accounts and manage appointments through the Appointment Scheduler skill. Here's a step-by-step guide on how returning patients can use the skill:
+
+1.	*Skill Invocation*: Returning patients can launch the skill by saying "Alexa, open Appointment Scheduler."
+
+2.	*Returning Patient Login*: Alexa will prompt the returning patient to provide their unique patient ID for authentication. The patient can say, "My patient ID is [patient ID]," to log in directly.
+
+3.	*Appointment Management*: Once logged in, returning patients can manage their appointments with ease. They can schedule appointments, check available doctors by giving date, time and your required specialization.
+
+4.	*Doctor Recommendations*: Returning patients can also ask for doctor recommendations based on their medical condition or symptoms. Alexa will provide a list of doctors specializing in relevant fields to help them make informed decisions.
+
+5.	*Appointment Booking*: After selecting a suitable doctor and appointment slot, the patient can proceed to book the appointment. Alexa will confirm the booking and send a confirmation email to the patient.
+
+![mainimg1](https://github.com/katakampranav/Hospital-Appointment-Scheduler-using-Alexa/assets/133202118/682f414d-a670-4249-85b0-ec1d6aed71ea)
+
+![mainimg2](https://github.com/katakampranav/Hospital-Appointment-Scheduler-using-Alexa/assets/133202118/f3c56acd-461a-46c4-b9cd-383f2c6a1800)
+
+## In case if you forgot your Patient ID
+
+-->*Forgot Patient ID*: In case the patient forgets their patient ID, Alexa will offer an alternative way to verify their identity. The patient can say, "I forgot my patient ID," and Alexa will ask for their father's name for verification.
+
+![img10](https://github.com/katakampranav/Hospital-Appointment-Scheduler-using-Alexa/assets/133202118/e1626c00-8bc2-4e25-961b-d3364c4b8aa2)
+
+## DynamoDB
+
+In our project we use two DynamoDB tables:
+
+1. Patient_Registration Table:
+- Purpose: This table is used to store the registration details of new patients who use the Alexa skill for the first time.
+-Attributes:
+      - patient_id: The unique identifier for each patient.
+      - full_name: The full name of the patient.
+      - age: The age of the patient.
+      - gender: The gender of the patient.
+      - DOB: The date of birth of the patient.
+      - Father_name: The father's name of the patient.
+      - email: The email address of the patient used for verification and communication.
+- Usage: When a new patient uses the skill, their registration information is collected and stored in this table. It is also used to retrieve the patient's details when they return to the skill.
+
+- Patient_Registration csv file:
